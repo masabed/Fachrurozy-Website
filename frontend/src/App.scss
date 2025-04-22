@@ -1,0 +1,180 @@
+/*
+Template Name: Bako
+Version: 1.0.0
+Author: PxlSolutions
+Author URI: http://themeforest.net/user/pxlsolutions
+Description: Personal Portfolio & Resume HTML Template
+
+[TABLE OF CONTENTS]
+
+01. Base
+02. Typography
+03. Header
+04. Skills
+05. Portfolio
+06. Clients
+07. Blog
+08. Helper
+09. Buttons
+10. Preloader
+11. Bootstrap Elements
+12. Theme Elements
+13. Slick Settings
+14. Responsive Settings
+
+*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap&subset=cyrillic-ext");
+@import "./sass/mixins";
+@import "./sass/base";
+@import "./sass/header";
+@import "./sass/main";
+@import "./sass/buttons";
+@import "./sass/elements";
+@import "./sass/slick";
+@import "./sass/responsive";
+
+// Demo Css - Please remove when it's unnecessary.
+
+.demosection {
+  border-radius: 0;
+  .overlay {
+    border-radius: 0;
+  }
+  &.herosection {
+    padding: 100px 0;
+  }
+}
+.demo-content {
+  position: relative;
+  z-index: 99;
+  text-align: center;
+  color: #fff;
+
+  h1,
+  h4 {
+    color: #fff;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    margin-top: 0;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+    padding: 30px 0;
+  }
+}
+
+.demoitems {
+  padding: 100px 0;
+  text-align: center;
+  h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.demoitem {
+  text-align: center;
+
+  img {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  h4 {
+    margin-bottom: 0;
+  }
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.admin-container {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Sidebar Styling */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+  padding: 15px;
+  transition: width 0.3s ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+
+  &.closed {
+    width: 70px;
+  }
+
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .sidebar-content {
+    margin-top: 50px;
+  }
+
+  .sidebar-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #495057;
+      }
+
+      .icon {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/* ✅ Adjust content margin based on sidebar state */
+.sidebar-closed .admin-content {
+  margin-left: 70px;
+}
+
+.sidebar-open .admin-content {
+  margin-left: 250px;
+}
+
+.admin-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}

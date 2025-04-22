@@ -1,0 +1,19 @@
+.sidebar {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar {
+      transform: translateX(0); // Always visible on md and up
+    }
+  }
+  
+  .nav-link:hover {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+  }
